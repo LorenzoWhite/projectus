@@ -1,0 +1,24 @@
+{
+  "name": "projectus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "*",
+    "bulma": "^0.7.1",
+    "cors": "^2.8.4",
+    "express": "*",
+    "g": "^2.0.1",
+    "mongoose": "*",
+    "nodemon": "^1.17.3"
+  },
+  "author": "WhiteWynn",
+  "license": "ISC",
+  "devDependencies": {
+    "@angular/cli": "^1.7.4"
+  }
+}

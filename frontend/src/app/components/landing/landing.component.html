@@ -1,0 +1,44 @@
+<section class="hero is-info is-fullheight has-image">
+  <div class="hero-head">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="../">
+            <h1>Project.us</h1>
+          </a>
+          <span class="navbar-burger burger" data-target="navbarMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+      </div>
+      </div>
+    </nav>
+
+  </div>
+
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div class="column is-6 is-offset-3">
+        <h1 class="title">
+          Coming Soon
+        </h1>
+        <h2 class="subtitle">
+          Learn what you want to create. Find who you need to know.
+        </h2>
+
+
+          <form (submit)="onSubmit()" class="field is-grouped">
+            <p class="control is-expanded">
+              <input class="input" type="text" [(ngModel)]="email" name="email" placeholder="Enter your email">
+            </p>
+            <p class="control">
+              <input type="submit" class="button is-info" value="Notify Me">
+            </p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</section>
+<script async type="text/javascript" src="../js/bulma.js"></script>

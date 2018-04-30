@@ -1,0 +1,9 @@
+.has-image {
+  background: url('../../../assets/images/img1.jpg')center center; background-size:cover;
+  background-position: 0% 90%;
+}
+.box {
+  border-radius: 0;
+  opacity: .2;
+
+}

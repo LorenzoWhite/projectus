@@ -1,0 +1,10 @@
+framework module BCFoundation {
+  umbrella header "BCFoundation.h"
+
+  config_macros [exhaustive] EC_DEBUG, EC_RELEASE
+
+  link framework "BCFoundation"
+
+  export *
+  module * { export * }
+}
