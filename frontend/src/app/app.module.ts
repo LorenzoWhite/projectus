@@ -9,7 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import { HttpModule } from '@angular/http'
+import { HttpClientModule } from '@angular/common/http';
 
 import { ValidateService } from './services/validate.service'
 import { AuthService } from './services/auth.service'
@@ -29,7 +29,7 @@ import { AuthService } from './services/auth.service'
     AppRoutingModule,
     AngularFontAwesomeModule,
     FormsModule,
-    HttpModule
+    HttpClientModule
 
   ],
   providers: [ValidateService, AuthService],

@@ -1,21 +1,26 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers } from '@angular/http';
-import 'rxjs/add/operator/map'
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class AuthService {
   userEmail: any;
 
+
   constructor(
-    private http: Http
+    private http: HttpClient
   ) { }
 
-  registerEmail(userEmail){
-    let headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-    let opts = {headers: headers}
-    return this.http.post('http://localhost:3000/users/notifyme', userEmail, {headers: headers})
-      .map(res => res.json())
+  //broken because the POST request is expecting JSON information, but we're sending a string as defined in the params i'm stupid
+  registerEmail(userEmail: string){
+    let jsonEmail = JSON.stringify({email: userEmail})
+    let regUrl = 'http://localhost:3000/users/notifyme';
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+      })
+    };
+    return this.http.post(regUrl, jsonEmail, httpOptions)
   }
 
 }

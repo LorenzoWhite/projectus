@@ -24,7 +24,8 @@ export class LandingComponent implements OnInit {
       console.log("please use valid email")
       return false
     }
-    this.authService.registerEmail(this.email).subscribe(data =>{
+    this.authService.registerEmail(this.email)
+    .subscribe(data =>{
       if(data.success){
         console.log('you are now registered')
       } else {
